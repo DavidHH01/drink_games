@@ -279,7 +279,7 @@
       </div>
 
       <!-- Botón de inicio para host -->
-      <div v-else class="mb-6 animate-fade-in-up animation-delay-700 flex justify-center">
+      <div v-else-if="!gameStarted" class="mb-6 animate-fade-in-up animation-delay-700 flex justify-center">
         <div class="w-full max-w-md">
           <Button
             v-if="isHost && players.length >= 2"

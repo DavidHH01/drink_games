@@ -1,0 +1,221 @@
+{
+  "common": {
+    "back": "Back",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "gotIt": "Got it!",
+    "learnMore": "Learn More",
+    "comingSoon": "Coming Soon",
+    "players": "players",
+    "minutes": "minutes"
+  },
+  "language": {
+    "helpTranslate": "Help us translate",
+    "contribute": "Contribute",
+    "languageChanged": "Language changed to {language}"
+  },
+  "navigation": {
+    "home": "Home",
+    "games": "Games",
+    "rules": "Rules",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "changelog": "What's New",
+    "backToGames": "Back to Games"
+  },
+  "home": {
+    "title": "DRINK GAMES",
+    "subtitle": "Best Online Party Drinking Games",
+    "description": "Play pyramid challenges, system rules, and more exciting party games with friends",
+    "guaranteedFun": "Guaranteed fun",
+    "responsibleGaming": "Responsible gaming",
+    "forGroups": "For groups",
+    "firstTimePlaying": "First time playing?",
+    "seeCompleteRules": "See complete rules"
+  },
+  "games": {
+    "pyramid": {
+      "title": "PYRAMID",
+      "subtitle": "Challenges & Questions",
+      "description": "Climb the pyramid by completing challenges and answering questions. Refuse or fail... and drink!",
+      "step1": "Receive a challenge or question",
+      "step2": "Choose to accept or decline",
+      "step3": "Complete = climb up | Fail = drink",
+      "playersCount": "2-8 players",
+      "duration": "15-30 min",
+      "type": "Fun challenges",
+      "playButton": "Play Pyramid Game"
+    },
+    "system": {
+      "title": "SYSTEM",
+      "subtitle": "Guess the Rule",
+      "description": "One person is the master and sets a secret rule. Others must guess it... or drink for every mistake.",
+      "step1": "Master chooses a secret rule",
+      "step2": "Players take turns making actions",
+      "step3": "Break the rule = drink and keep trying",
+      "playersCount": "3-10 players",
+      "duration": "10-20 min",
+      "type": "Logic & deduction",
+      "playButton": "Play System Game"
+    },
+    "comingSoon": {
+      "title": "COMING SOON",
+      "subtitle": "More Epic Games",
+      "description": "We're working on exciting new games that will take your parties to the next level!",
+      "cardGames": "Card Games Collection",
+      "diceGames": "Dice Challenge Games",
+      "teamBattles": "Team vs Team Battles",
+      "karaoke": "Karaoke & Performance",
+      "inDevelopment": "In Development",
+      "newGames": "4+ New Games",
+      "moreFun": "More Fun",
+      "notifyButton": "Notify Me When Ready"
+    }
+  },
+  "content": {
+    "ultimateGuide": "The Ultimate Guide to Drinking Games",
+    "guideSubtitle": "Everything you need to know about party drinking games",
+    "hostPerfectParty": "How to Host the Perfect Party",
+    "hostPartyDescription": "Learn the essential tips for organizing memorable party games that everyone will enjoy. From setting up the space to choosing the right games for your group size.",
+    "safetyTips": "Drinking Game Safety Tips",
+    "safetyDescription": "Playing responsibly is key to having fun. Here are essential safety guidelines to ensure everyone has a great time while staying safe.",
+    "groupSizes": "Best Games for Different Group Sizes",
+    "groupSizesDescription": "Not sure which game to choose? Here's our guide to selecting the perfect drinking game based on how many people are playing."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question1": "What are the best drinking games for beginners?",
+    "answer1": "The Pyramid Game is perfect for beginners as it offers simple challenges with clear progression. Start with easy levels and gradually increase difficulty as players get comfortable.",
+    "question2": "How many people can play these drinking games?",
+    "answer2": "Our Pyramid Game works best with 2-8 players, while the System Game can accommodate 3-10 players. Both games are designed to be flexible and fun regardless of group size.",
+    "question3": "Can I play these games without alcohol?",
+    "answer3": "Absolutely! These games can be adapted for non-alcoholic play by substituting drinks with fun alternatives like doing silly dances, answering personal questions, or completing mini-challenges.",
+    "question4": "What makes a good drinking game?",
+    "answer4": "Great drinking games balance fun challenges with social interaction. They should be easy to understand, inclusive for all players, and promote laughter rather than excessive drinking."
+  },
+  "rules": {
+    "title": "Complete Game Rules",
+    "subtitle": "Everything you need to know to start playing",
+    "pyramidRules": "Pyramid Game - Challenges & Questions",
+    "systemRules": "System Game - Guess the Rule",
+    "responsibleGaming": "Responsible Gaming",
+    "responsibleText": "Always remember to drink responsibly and respect everyone's limits. The fun is in participation, not in excess."
+  },
+  "about": {
+    "title": "About Drink Games",
+    "subtitle": "Bringing people together through fun party games",
+    "mission": "Our Mission",
+    "missionText": "At Drink Games, we believe that the best parties happen when people connect, laugh, and create unforgettable memories together.",
+    "whyChoose": "Why Choose Our Games?",
+    "values": "Our Values"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy matters to us",
+    "lastUpdated": "Last updated: {date}",
+    "commitment": "Our Commitment to Your Privacy",
+    "informationCollect": "Information We Collect",
+    "howWeUse": "How We Use Your Information",
+    "cookies": "Cookies and Tracking Technologies",
+    "dataSharing": "Information Sharing and Disclosure",
+    "dataSecurity": "Data Security",
+    "yourRights": "Your Privacy Rights",
+    "childrenPrivacy": "Children's Privacy",
+    "changes": "Changes to This Privacy Policy",
+    "contact": "Contact Us"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: {date}",
+    "agreement": "Agreement to Terms",
+    "useLicense": "Use License",
+    "ageRequirements": "Age Requirements",
+    "responsibleGaming": "Responsible Gaming Policy",
+    "disclaimer": "Disclaimer",
+    "limitations": "Limitations",
+    "userConduct": "User Conduct",
+    "governing": "Governing Law",
+    "readyToPlay": "Ready to Play?",
+    "agreeButton": "I Agree - Start Playing"
+  },
+  "notifications": {
+    "getNotified": "Get Notified",
+    "notifySubtitle": "Be the first to know about new games",
+    "whatsComingTitle": "What's Coming:",
+    "emailPlaceholder": "your.emailexample.com",
+    "privacyNote": "We respect your privacy. We'll only email you about new game releases and never spam or share your email.",
+    "maybeLater": "Maybe Later",
+    "notifyButton": "Notify Me!",
+    "subscribeSuccess": "Thanks! We'll notify you when new games are ready."
+  },
+  "meta": {
+    "homeTitle": "Drink Games - Best Online Party Drinking Games | Play Free",
+    "homeDescription": "Play the best drinking games online! Pyramid challenges, System rules, and more party games. Perfect for groups of 2-10 players. Free to play, fun guaranteed!",
+    "rulesTitle": "Game Rules - Drink Games | Complete Guide",
+    "rulesDescription": "Complete rules for pyramid and system drinking games. Learn how to play, safety guidelines, and alternative non-alcoholic versions.",
+    "aboutTitle": "About Us - Drink Games | Our Mission & Values",
+    "aboutDescription": "Learn about Drink Games mission to bring people together through fun party games. Discover our values and commitment to responsible gaming.",
+    "privacyTitle": "Privacy Policy - Drink Games | Your Privacy Matters",
+    "privacyDescription": "Read our comprehensive privacy policy. Learn how Drink Games protects your personal information and respects your privacy rights.",
+    "termsTitle": "Terms of Service - Drink Games | Legal Information",
+    "termsDescription": "Read the complete terms of service for Drink Games. Understand your rights, responsibilities, and our policies for responsible gaming."
+  },
+  "patchNotes": {
+    "title": "Patch Notes",
+    "subtitle": "Latest updates and improvements",
+    "button": "What's New",
+    "latest": "NEW",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "new": "✨ New Features",
+      "improvements": "🔧 Improvements",
+      "fixes": "🐛 Bug Fixes"
+    },
+    "v1_0_0": {
+      "version": "Version 1.0.0",
+      "date": "January 2025",
+      "type": "Major Release",
+      "description": "Welcome to the first official release of Drink Games! This update includes comprehensive game rules, new pages, and enhanced user experience.",
+      "new": [
+        "Added Rules page with detailed game instructions for Pyramid and System games",
+        "Created Terms of Service page with user agreements and responsible gaming policies",
+        "Implemented About page showcasing our mission and values",
+        "Added Privacy page with data protection information",
+        "Created comprehensive Ultimate Guide to Drinking Games",
+        "Added multi-language support (English/Spanish)",
+        "Implemented responsive header and footer navigation"
+      ],
+      "improvements": [
+        "Enhanced user experience with animated backgrounds",
+        "Improved responsive design for all screen sizes",
+        "Added clear navigation buttons throughout the site",
+        "Optimized page loading performance",
+        "Better accessibility features",
+        "Improved SEO optimization"
+      ],
+      "fixes": [
+        "Fixed navigation issues on mobile devices",
+        "Resolved styling inconsistencies across pages",
+        "Fixed language selector functionality",
+        "Improved compatibility with different browsers"
+      ]
+    },
+    "upcoming": {
+      "title": "Coming Soon",
+      "subtitle": "Features we're working on",
+      "features": [
+        "🎮 More drinking games and variations",
+        "👥 Multiplayer online gameplay improvements",
+        "🔊 Sound effects and background music"
+      ],
+      "note": "These features are in development and release dates may vary."
+    }
+  }
+}

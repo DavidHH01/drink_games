@@ -1,0 +1,221 @@
+{
+  "common": {
+    "back": "Volver",
+    "close": "Cerrar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "gotIt": "¡Entendido!",
+    "learnMore": "Saber Más",
+    "comingSoon": "Próximamente",
+    "players": "jugadores",
+    "minutes": "minutos"
+  },
+  "language": {
+    "helpTranslate": "Ayúdanos a traducir",
+    "contribute": "Contribuir",
+    "languageChanged": "Idioma cambiado a {language}"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "games": "Juegos",
+    "rules": "Reglas",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "changelog": "Novedades",
+    "backToGames": "Volver a Juegos"
+  },
+  "home": {
+    "title": "DRINK GAMES",
+    "subtitle": "Los Mejores Juegos de Beber Online",
+    "description": "Juega desafíos de pirámide, reglas de sistema y más juegos emocionantes con amigos",
+    "guaranteedFun": "Diversión garantizada",
+    "responsibleGaming": "Juego responsable",
+    "forGroups": "Para grupos",
+    "firstTimePlaying": "¿Primera vez jugando?",
+    "seeCompleteRules": "Ver reglas completas"
+  },
+  "games": {
+    "pyramid": {
+      "title": "PIRÁMIDE",
+      "subtitle": "Desafíos y Preguntas",
+      "description": "Escala la pirámide completando desafíos y respondiendo preguntas. ¡Rechaza o falla... y bebe!",
+      "step1": "Recibe un desafío o pregunta",
+      "step2": "Elige aceptar o rechazar",
+      "step3": "Completar = subir | Fallar = beber",
+      "playersCount": "2-8 jugadores",
+      "duration": "15-30 min",
+      "type": "Desafíos divertidos",
+      "playButton": "Jugar Pirámide"
+    },
+    "system": {
+      "title": "SISTEMA",
+      "subtitle": "Adivina la Regla",
+      "description": "Una persona es el maestro y establece una regla secreta. Los demás deben adivinarla... o beber por cada error.",
+      "step1": "El maestro elige una regla secreta",
+      "step2": "Los jugadores se turnan haciendo acciones",
+      "step3": "Romper la regla = beber y seguir intentando",
+      "playersCount": "3-10 jugadores",
+      "duration": "10-20 min",
+      "type": "Lógica y deducción",
+      "playButton": "Jugar Sistema"
+    },
+    "comingSoon": {
+      "title": "PRÓXIMAMENTE",
+      "subtitle": "Más Juegos Épicos",
+      "description": "¡Estamos trabajando en nuevos juegos emocionantes que llevarán tus fiestas al siguiente nivel!",
+      "cardGames": "Colección de Juegos de Cartas",
+      "diceGames": "Juegos de Desafío con Dados",
+      "teamBattles": "Batallas de Equipos",
+      "karaoke": "Karaoke y Actuación",
+      "inDevelopment": "En Desarrollo",
+      "newGames": "4+ Juegos Nuevos",
+      "moreFun": "Más Diversión",
+      "notifyButton": "Notificarme Cuando Esté Listo"
+    }
+  },
+  "content": {
+    "ultimateGuide": "La Guía Definitiva de Juegos de Beber",
+    "guideSubtitle": "Todo lo que necesitas saber sobre juegos de beber para fiestas",
+    "hostPerfectParty": "Cómo Organizar la Fiesta Perfecta",
+    "hostPartyDescription": "Aprende los consejos esenciales para organizar juegos de fiesta memorables que todos disfrutarán. Desde preparar el espacio hasta elegir los juegos correctos para tu grupo.",
+    "safetyTips": "Consejos de Seguridad para Juegos de Beber",
+    "safetyDescription": "Jugar de manera responsable es clave para divertirse. Aquí tienes pautas de seguridad esenciales para asegurar que todos se diviertan mientras se mantienen seguros.",
+    "groupSizes": "Mejores Juegos para Diferentes Tamaños de Grupo",
+    "groupSizesDescription": "¿No estás seguro de qué juego elegir? Aquí está nuestra guía para seleccionar el juego de beber perfecto basado en cuántas personas están jugando."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "question1": "¿Cuáles son los mejores juegos de beber para principiantes?",
+    "answer1": "El Juego Pirámide es perfecto para principiantes ya que ofrece desafíos simples con progresión clara. Comienza con niveles fáciles y aumenta gradualmente la dificultad mientras los jugadores se sienten cómodos.",
+    "question2": "¿Cuántas personas pueden jugar estos juegos de beber?",
+    "answer2": "Nuestro Juego Pirámide funciona mejor con 2-8 jugadores, mientras que el Juego Sistema puede acomodar 3-10 jugadores. Ambos juegos están diseñados para ser flexibles y divertidos sin importar el tamaño del grupo.",
+    "question3": "¿Puedo jugar estos juegos sin alcohol?",
+    "answer3": "¡Absolutamente! Estos juegos pueden adaptarse para juego sin alcohol sustituyendo las bebidas con alternativas divertidas como hacer bailes tontos, responder preguntas personales o completar mini-desafíos.",
+    "question4": "¿Qué hace un buen juego de beber?",
+    "answer4": "Los grandes juegos de beber equilibran desafíos divertidos con interacción social. Deben ser fáciles de entender, inclusivos para todos los jugadores y promover la risa en lugar del consumo excesivo."
+  },
+  "rules": {
+    "title": "Reglas Completas del Juego",
+    "subtitle": "Todo lo que necesitas saber para empezar a jugar",
+    "pyramidRules": "Juego Pirámide - Desafíos y Preguntas",
+    "systemRules": "Juego Sistema - Adivina la Regla",
+    "responsibleGaming": "Juego Responsable",
+    "responsibleText": "Siempre recuerda beber responsablemente y respetar los límites de todos. La diversión está en la participación, no en el exceso."
+  },
+  "about": {
+    "title": "Acerca de Drink Games",
+    "subtitle": "Uniendo a las personas a través de juegos de fiesta divertidos",
+    "mission": "Nuestra Misión",
+    "missionText": "En Drink Games, creemos que las mejores fiestas ocurren cuando las personas se conectan, ríen y crean recuerdos inolvidables juntas.",
+    "whyChoose": "¿Por Qué Elegir Nuestros Juegos?",
+    "values": "Nuestros Valores"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "subtitle": "Tu privacidad nos importa",
+    "lastUpdated": "Última actualización: {date}",
+    "commitment": "Nuestro Compromiso con Tu Privacidad",
+    "informationCollect": "Información que Recopilamos",
+    "howWeUse": "Cómo Usamos Tu Información",
+    "cookies": "Cookies y Tecnologías de Seguimiento",
+    "dataSharing": "Compartir y Divulgación de Información",
+    "dataSecurity": "Seguridad de Datos",
+    "yourRights": "Tus Derechos de Privacidad",
+    "childrenPrivacy": "Privacidad de Menores",
+    "changes": "Cambios a Esta Política de Privacidad",
+    "contact": "Contáctanos"
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: {date}",
+    "agreement": "Acuerdo de Términos",
+    "useLicense": "Licencia de Uso",
+    "ageRequirements": "Requisitos de Edad",
+    "responsibleGaming": "Política de Juego Responsable",
+    "disclaimer": "Descargo de Responsabilidad",
+    "limitations": "Limitaciones",
+    "userConduct": "Conducta del Usuario",
+    "governing": "Ley Aplicable",
+    "readyToPlay": "¿Listo para Jugar?",
+    "agreeButton": "Acepto - Comenzar a Jugar"
+  },
+  "notifications": {
+    "getNotified": "Recibir Notificaciones",
+    "notifySubtitle": "Sé el primero en saber sobre nuevos juegos",
+    "whatsComingTitle": "Lo que Viene:",
+    "emailPlaceholder": "tu.emailejemplo.com",
+    "privacyNote": "Respetamos tu privacidad. Solo te enviaremos emails sobre nuevos lanzamientos de juegos y nunca spam o compartiremos tu email.",
+    "maybeLater": "Tal Vez Después",
+    "notifyButton": "¡Notificarme!",
+    "subscribeSuccess": "¡Gracias! Te notificaremos cuando los nuevos juegos estén listos."
+  },
+  "meta": {
+    "homeTitle": "Drink Games - Mejores Juegos de Beber Online | Jugar Gratis",
+    "homeDescription": "¡Juega los mejores juegos de beber online! Desafíos de pirámide, reglas de sistema y más juegos de fiesta. Perfecto para grupos de 2-10 jugadores. ¡Gratis y diversión garantizada!",
+    "rulesTitle": "Reglas del Juego - Drink Games | Guía Completa",
+    "rulesDescription": "Reglas completas para juegos de beber pirámide y sistema. Aprende cómo jugar, pautas de seguridad y versiones alternativas sin alcohol.",
+    "aboutTitle": "Acerca de Nosotros - Drink Games | Nuestra Misión y Valores",
+    "aboutDescription": "Conoce la misión de Drink Games de unir a las personas a través de juegos de fiesta divertidos. Descubre nuestros valores y compromiso con el juego responsable.",
+    "privacyTitle": "Política de Privacidad - Drink Games | Tu Privacidad Importa",
+    "privacyDescription": "Lee nuestra política de privacidad integral. Aprende cómo Drink Games protege tu información personal y respeta tus derechos de privacidad.",
+    "termsTitle": "Términos de Servicio - Drink Games | Información Legal",
+    "termsDescription": "Lee los términos de servicio completos para Drink Games. Entiende tus derechos, responsabilidades y nuestras políticas para el juego responsable."
+  },
+  "patchNotes": {
+    "title": "Notas del Parche",
+    "subtitle": "Últimas actualizaciones y mejoras",
+    "button": "Novedades",
+    "latest": "NUEVO",
+    "lastUpdated": "Última actualización",
+    "sections": {
+      "new": "✨ Nuevas Características",
+      "improvements": "🔧 Mejoras",
+      "fixes": "🐛 Correcciones"
+    },
+    "v1_0_0": {
+      "version": "Versión 1.0.0",
+      "date": "Enero 2025",
+      "type": "Lanzamiento Mayor",
+      "description": "¡Bienvenidos al primer lanzamiento oficial de Drink Games! Esta actualización incluye reglas completas de juegos, nuevas páginas y experiencia de usuario mejorada.",
+      "new": [
+        "Añadida página de Reglas con instrucciones detalladas para juegos Pirámide y Sistema",
+        "Creada página de Términos de Servicio con acuerdos de usuario y políticas de juego responsable",
+        "Implementada página Acerca de mostrando nuestra misión y valores",
+        "Añadida página de Privacidad con información de protección de datos",
+        "Creada Guía Completa de Juegos de Bebidas",
+        "Añadido soporte multi-idioma (Inglés/Español)",
+        "Implementada navegación responsive con header y footer"
+      ],
+      "improvements": [
+        "Experiencia de usuario mejorada con fondos animados",
+        "Diseño responsive mejorado para todos los tamaños de pantalla",
+        "Añadidos botones de navegación claros en todo el sitio",
+        "Optimizado rendimiento de carga de páginas",
+        "Mejores características de accesibilidad",
+        "Optimización SEO mejorada"
+      ],
+      "fixes": [
+        "Solucionados problemas de navegación en dispositivos móviles",
+        "Resueltas inconsistencias de estilo en las páginas",
+        "Solucionada funcionalidad del selector de idioma",
+        "Mejorada compatibilidad con diferentes navegadores"
+      ]
+    },
+    "upcoming": {
+      "title": "Próximamente",
+      "subtitle": "Características en las que trabajamos",
+      "features": [
+        "🎮 Más juegos de bebidas y variaciones",
+        "👥 Mejoras en el gameplay multijugador online",
+        "🔊 Efectos de sonido y música de fondo"
+      ],
+      "note": "Estas características están en desarrollo y las fechas de lanzamiento pueden variar."
+    }
+  }
+}

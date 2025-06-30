@@ -28,7 +28,11 @@
         <h1
           class="text-6xl md:text-8xl lg:text-9xl font-bold text-primary mb-6 animate-fade-in-up"
         >
-          MODO <span class="text-danger animate-pulse">SISTEMA</span>
+          MODO
+          <span
+            class="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent animate-pulse"
+            >SISTEMA</span
+          >
         </h1>
         <p
           class="text-xl md:text-2xl text-secondary mb-4 animate-fade-in-up animation-delay-300"
@@ -40,222 +44,342 @@
       <!-- Card principal de configuración -->
       <div class="max-w-md mx-auto animate-fade-in-up animation-delay-700">
         <Card
-          :variant="CardVariant.ELEVATED"
-          :hover-effect="CardHoverEffect.LIFT"
-          :shadow="CardShadow.LARGE"
-          :radius="CardRadius.EXTRA_LARGE"
-          class="bg-white"
+          class="group hover:shadow-2xl transition-all duration-500 bg-white border border-gray-200 overflow-hidden"
         >
-          <CardHeader :align="CardHeaderAlign.CENTER">
-            <template #title>
-              <div class="flex items-center justify-center gap-3 mb-2">
-                <div
-                  class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg"
-                >
-                  <MdiIcon icon="mdiServerNetwork" class="w-6 h-6 text-white" />
-                </div>
-                <span class="text-2xl font-bold text-white">Conectar</span>
-              </div>
-            </template>
-            <template #subtitle>
-              <span class="text-gray-200"
-                >Crea o únete a una sala de juego</span
-              >
-            </template>
-          </CardHeader>
+          <!-- Header con gradiente azul como en index -->
+          <div class="h-2 bg-gradient-to-r from-blue-500 to-blue-600"></div>
 
-          <CardBody :padding="CardSize.LARGE">
+          <CardBody :padding="CardSize.LARGE" class="p-8">
+            <!-- Header de la card -->
+            <div class="text-center mb-8">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:scale-110 transition-transform duration-300"
+              >
+                <MdiIcon icon="mdiServerNetwork" class="w-8 h-8 text-white" />
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">
+                Conectar al Sistema
+              </h2>
+              <p class="text-gray-600">Crea o únete a una sala de juego</p>
+            </div>
+
             <div class="space-y-6">
-              <!-- Inputs de configuración -->
-              <div class="space-y-4">
+              <!-- Input de nombre -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-gray-700">
+                  <MdiIcon icon="mdiAccount" class="w-4 h-4 inline mr-2" />
+                  Nombre del jugador
+                </label>
                 <Input
                   v-model="name"
-                  :variant="InputVariant.ACCENT"
+                  :variant="InputVariant.INFO"
                   :size="InputSize.LARGE"
                   :radius="InputRadius.LARGE"
                   placeholder="Tu nombre"
-                  label="Nombre del jugador"
-                  icon="mdiAccount"
-                  icon-position="left"
                   clearable
                   :maxlength="20"
                   :error="nameError"
-                />
-
-                <Input
-                  v-if="mode === 'join'"
-                  v-model="roomId"
-                  :variant="InputVariant.ACCENT"
-                  :size="InputSize.LARGE"
-                  :radius="InputRadius.LARGE"
-                  placeholder="Código de sala"
-                  label="Código de la sala"
-                  icon="mdiDoor"
-                  icon-position="left"
-                  clearable
-                  :maxlength="10"
-                  :error="roomError"
+                  class="bg-gray-50 border-gray-200 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
-              <!-- Selector de modo -->
-              <div class="space-y-3">
-                <h4
-                  class="text-lg font-semibold text-white flex items-center gap-2"
+              <!-- Selector de modo mejorado -->
+              <div class="space-y-4">
+                <h3
+                  class="text-lg font-semibold text-gray-900 flex items-center gap-2"
                 >
-                  <MdiIcon icon="mdiGamepad" class="w-5 h-5 text-info" />
+                  <MdiIcon icon="mdiGamepad" class="w-5 h-5 text-blue-500" />
                   Modo de juego
-                </h4>
+                </h3>
 
                 <div class="grid grid-cols-2 gap-3">
+                  <!-- Crear Sala - Verde (positivo/crear) -->
                   <button
                     @click="setMode('create')"
                     :class="[
-                      'p-4 rounded-lg border-2 transition-all duration-200 text-left',
+                      'group p-4 rounded-xl border-2 transition-all duration-300 text-left relative overflow-hidden',
                       mode === 'create'
-                        ? 'border-red-500 bg-red-50 shadow-md'
-                        : 'border-gray-200 bg-gray-50 hover:border-gray-300 hover:bg-gray-100',
+                        ? 'border-green-500 bg-gradient-to-br from-green-50 to-green-100 shadow-lg scale-105'
+                        : 'border-gray-200 bg-white hover:border-green-300 hover:shadow-md hover:scale-102',
                     ]"
                   >
-                    <div class="flex items-center gap-3 mb-2">
-                      <MdiIcon
-                        icon="mdiPlus"
-                        :class="[
-                          'w-5 h-5',
-                          mode === 'create' ? 'text-red-600' : 'text-gray-600',
-                        ]"
-                      />
-                      <span
-                        :class="[
-                          'font-medium',
-                          mode === 'create' ? 'text-red-800' : 'text-gray-800',
-                        ]"
-                      >
-                        Crear Sala
-                      </span>
+                    <!-- Gradiente de fondo activo -->
+                    <div
+                      v-if="mode === 'create'"
+                      class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10"
+                    ></div>
+
+                    <div class="relative">
+                      <div class="flex items-center gap-3 mb-3">
+                        <div
+                          :class="[
+                            'w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300',
+                            mode === 'create'
+                              ? 'bg-gradient-to-br from-green-500 to-green-600 shadow-lg'
+                              : 'bg-gray-100 group-hover:bg-green-100',
+                          ]"
+                        >
+                          <MdiIcon
+                            icon="mdiPlus"
+                            :class="[
+                              'w-5 h-5 transition-colors duration-300',
+                              mode === 'create'
+                                ? 'text-white'
+                                : 'text-gray-600 group-hover:text-green-600',
+                            ]"
+                          />
+                        </div>
+                        <span
+                          :class="[
+                            'font-bold text-lg transition-colors duration-300',
+                            mode === 'create'
+                              ? 'text-green-700'
+                              : 'text-gray-800 group-hover:text-green-600',
+                          ]"
+                        >
+                          Crear Sala
+                        </span>
+                        <!-- Check icon when selected -->
+                        <MdiIcon
+                          v-if="mode === 'create'"
+                          icon="mdiCheck"
+                          class="w-5 h-5 text-green-600 ml-auto"
+                        />
+                      </div>
+                      <p class="text-sm text-gray-600 leading-relaxed">
+                        Crea una nueva sala y sé el anfitrión
+                      </p>
                     </div>
-                    <p class="text-sm text-gray-600">
-                      Crea una nueva sala para tus amigos
-                    </p>
                   </button>
 
+                  <!-- Unirse a Sala - Azul (consistente con el tema) -->
                   <button
                     @click="setMode('join')"
                     :class="[
-                      'p-4 rounded-lg border-2 transition-all duration-200 text-left',
+                      'group p-4 rounded-xl border-2 transition-all duration-300 text-left relative overflow-hidden',
                       mode === 'join'
-                        ? 'border-red-500 bg-red-50 shadow-md'
-                        : 'border-gray-200 bg-gray-50 hover:border-gray-300 hover:bg-gray-100',
+                        ? 'border-blue-500 bg-gradient-to-br from-blue-50 to-blue-100 shadow-lg scale-105'
+                        : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-md hover:scale-102',
                     ]"
                   >
-                    <div class="flex items-center gap-3 mb-2">
-                      <MdiIcon
-                        icon="mdiAccountMultiple"
-                        :class="[
-                          'w-5 h-5',
-                          mode === 'join' ? 'text-red-600' : 'text-gray-600',
-                        ]"
-                      />
-                      <span
-                        :class="[
-                          'font-medium',
-                          mode === 'join' ? 'text-red-800' : 'text-gray-800',
-                        ]"
-                      >
-                        Unirse
-                      </span>
+                    <!-- Gradiente de fondo activo -->
+                    <div
+                      v-if="mode === 'join'"
+                      class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-600/10"
+                    ></div>
+
+                    <div class="relative">
+                      <div class="flex items-center gap-3 mb-3">
+                        <div
+                          :class="[
+                            'w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300',
+                            mode === 'join'
+                              ? 'bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg'
+                              : 'bg-gray-100 group-hover:bg-blue-100',
+                          ]"
+                        >
+                          <MdiIcon
+                            icon="mdiAccountMultiple"
+                            :class="[
+                              'w-5 h-5 transition-colors duration-300',
+                              mode === 'join'
+                                ? 'text-white'
+                                : 'text-gray-600 group-hover:text-blue-600',
+                            ]"
+                          />
+                        </div>
+                        <span
+                          :class="[
+                            'font-bold text-lg transition-colors duration-300',
+                            mode === 'join'
+                              ? 'text-blue-700'
+                              : 'text-gray-800 group-hover:text-blue-600',
+                          ]"
+                        >
+                          Unirse
+                        </span>
+                        <!-- Check icon when selected -->
+                        <MdiIcon
+                          v-if="mode === 'join'"
+                          icon="mdiCheck"
+                          class="w-5 h-5 text-blue-600 ml-auto"
+                        />
+                      </div>
+                      <p class="text-sm text-gray-600 leading-relaxed">
+                        Únete a una sala existente
+                      </p>
                     </div>
-                    <p class="text-sm text-gray-600">
-                      Únete a una sala existente
-                    </p>
                   </button>
                 </div>
               </div>
 
-              <!-- Información adicional según el modo -->
-              <div class="bg-blue-50 rounded-lg p-4">
-                <!-- Header con icono a la izquierda y texto centrado -->
-                <div class="relative flex justify-center items-center mb-3">
-                  <!-- Icono a la izquierda -->
-                  <div class="absolute left-0">
+              <!-- Input de código de sala (solo si es join) -->
+              <Transition
+                enter-active-class="transition duration-300 ease-out"
+                enter-from-class="opacity-0 translate-y-4"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-200 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 translate-y-4"
+              >
+                <div v-if="mode === 'join'" class="space-y-2">
+                  <label class="block text-sm font-semibold text-gray-700">
+                    <MdiIcon icon="mdiDoor" class="w-4 h-4 inline mr-2" />
+                    Código de la sala
+                  </label>
+                  <Input
+                    v-model="roomId"
+                    :variant="InputVariant.INFO"
+                    :size="InputSize.LARGE"
+                    :radius="InputRadius.LARGE"
+                    placeholder="Código de sala"
+                    clearable
+                    :maxlength="10"
+                    :error="roomError"
+                    class="bg-gray-50 border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+              </Transition>
+
+              <!-- Información contextual -->
+              <div
+                :class="[
+                  'rounded-xl p-4 border transition-all duration-300',
+                  mode === 'create'
+                    ? 'bg-green-50 border-green-200'
+                    : 'bg-blue-50 border-blue-200',
+                ]"
+              >
+                <div class="flex items-center gap-3 mb-3">
+                  <div
+                    :class="[
+                      'w-8 h-8 rounded-lg flex items-center justify-center',
+                      mode === 'create' ? 'bg-green-100' : 'bg-blue-100',
+                    ]"
+                  >
                     <MdiIcon
                       icon="mdiInformation"
-                      class="w-5 h-5 text-blue-600"
+                      :class="[
+                        'w-4 h-4',
+                        mode === 'create' ? 'text-green-600' : 'text-blue-600',
+                      ]"
                     />
                   </div>
-
-                  <!-- Título centrado -->
-                  <p class="text-blue-600 font-medium text-center">
-                    {{ mode === "create" ? "Crear sala:" : "Unirse a sala:" }}
-                  </p>
+                  <h4
+                    :class="[
+                      'font-semibold',
+                      mode === 'create' ? 'text-green-700' : 'text-blue-700',
+                    ]"
+                  >
+                    {{
+                      mode === "create"
+                        ? "Información para crear:"
+                        : "Información para unirse:"
+                    }}
+                  </h4>
                 </div>
 
-                <!-- Lista con puntos y texto alineado horizontal -->
-                <ul class="text-sm text-blue-800 text-left pl-5 space-y-1">
-                  <li v-if="mode === 'create'" class="list-disc">
-                    Se generará un código automáticamente si no pones uno
+                <ul
+                  :class="[
+                    'text-sm space-y-1 pl-2',
+                    mode === 'create' ? 'text-green-800' : 'text-blue-800',
+                  ]"
+                >
+                  <li v-if="mode === 'create'" class="flex items-start gap-2">
+                    <div
+                      class="w-1 h-1 bg-current rounded-full mt-2 flex-shrink-0"
+                    ></div>
+                    <span>Se generará un código automáticamente</span>
                   </li>
-                  <li v-if="mode === 'create'" class="list-disc">
-                    Serás el anfitrión de la sala
+                  <li v-if="mode === 'create'" class="flex items-start gap-2">
+                    <div
+                      class="w-1 h-1 bg-current rounded-full mt-2 flex-shrink-0"
+                    ></div>
+                    <span>Serás el anfitrión de la sala</span>
                   </li>
-                  <li v-if="mode === 'join'" class="list-disc">
-                    Necesitas el código de la sala
+                  <li v-if="mode === 'join'" class="flex items-start gap-2">
+                    <div
+                      class="w-1 h-1 bg-current rounded-full mt-2 flex-shrink-0"
+                    ></div>
+                    <span>Necesitas el código de la sala</span>
                   </li>
-                  <li class="list-disc">Máximo 8 jugadores por sala</li>
-                  <li class="list-disc">Mínimo 2 jugadores para comenzar</li>
+                  <li class="flex items-start gap-2">
+                    <div
+                      class="w-1 h-1 bg-current rounded-full mt-2 flex-shrink-0"
+                    ></div>
+                    <span>Máximo 8 jugadores por sala</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <div
+                      class="w-1 h-1 bg-current rounded-full mt-2 flex-shrink-0"
+                    ></div>
+                    <span>Mínimo 2 jugadores para comenzar</span>
+                  </li>
                 </ul>
               </div>
+
+              <!-- Botón de acción -->
+              <Button
+                :variant="mode === 'create' ? ButtonVariant.SUCCESS : ButtonVariant.INFO"
+                :size="ButtonSize.LARGE"
+                :icon="mode === 'create' ? 'mdiPlus' : 'mdiLogin'"
+                :icon-position="ButtonIconPosition.LEFT"
+                :disabled="!canEnterRoom"
+                :loading="loading"
+                :class="[
+                  'w-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300',
+                  mode === 'create'
+                    ? 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 border-green-600'
+                    : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 border-blue-600',
+                ].join(' ')"
+                @click="goToRoom"
+              >
+                {{
+                  mode === "create" ? "🚀 Crear Sala" : "🎮 Entrar a la Sala"
+                }}
+              </Button>
             </div>
           </CardBody>
-
-          <CardActions :align="CardActionsAlign.CENTER" class="pb-6">
-            <Button
-              :variant="ButtonVariant.INFO"
-              :size="ButtonSize.EXTRA_LARGE"
-              :icon="mode === 'create' ? 'mdiPlus' : 'mdiLogin'"
-              :icon-position="ButtonIconPosition.LEFT"
-              :disabled="!canEnterRoom"
-              :loading="loading"
-              class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 border-green-600 hover:border-green-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-              @click="goToRoom"
-            >
-              {{ mode === "create" ? "Crear Sala" : "Entrar a la Sala" }}
-            </Button>
-          </CardActions>
         </Card>
       </div>
 
       <!-- Información del sistema -->
       <div class="mt-12 animate-fade-in-up animation-delay-1000">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-          <div class="text-center">
+          <div
+            class="text-center p-6 bg-white/95 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg"
+          >
             <div
-              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+              class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4"
             >
-              <MdiIcon icon="mdiServerNetwork" class="w-6 h-6 text-red-600" />
+              <MdiIcon icon="mdiServerNetwork" class="w-6 h-6 text-blue-600" />
             </div>
-            <h4 class="font-semibold text-white mb-1">Multijugador</h4>
-            <p class="text-sm text-gray-300">Juega online con amigos</p>
+            <h4 class="font-semibold text-gray-900 mb-2">Multijugador</h4>
+            <p class="text-sm text-gray-600">Juega online con amigos</p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center p-6 bg-white/95 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg"
+          >
             <div
-              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+              class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4"
             >
-              <MdiIcon icon="mdiSyncCircle" class="w-6 h-6 text-red-600" />
+              <MdiIcon icon="mdiSyncCircle" class="w-6 h-6 text-blue-600" />
             </div>
-            <h4 class="font-semibold text-white mb-1">Tiempo Real</h4>
-            <p class="text-sm text-gray-300">Sincronización instantánea</p>
+            <h4 class="font-semibold text-gray-900 mb-2">Tiempo Real</h4>
+            <p class="text-sm text-gray-600">Sincronización instantánea</p>
           </div>
 
-          <div class="text-center">
+          <div
+            class="text-center p-6 bg-white/95 backdrop-blur-md rounded-xl border border-white/30 hover:bg-white transition-all duration-300 shadow-lg"
+          >
             <div
-              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-3"
+              class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4"
             >
-              <MdiIcon icon="mdiAccountGroup" class="w-6 h-6 text-red-600" />
+              <MdiIcon icon="mdiAccountGroup" class="w-6 h-6 text-blue-600" />
             </div>
-            <h4 class="font-semibold text-white mb-1">Hasta 8 jugadores</h4>
-            <p class="text-sm text-gray-300">Diversión para grupos grandes</p>
+            <h4 class="font-semibold text-gray-900 mb-2">Hasta 8 jugadores</h4>
+            <p class="text-sm text-gray-600">Diversión para grupos grandes</p>
           </div>
         </div>
       </div>
@@ -424,6 +548,9 @@ watch(roomId, () => {
 </script>
 
 <style scoped>
+.bg-white {
+  background-color: white !important;
+}
 /* Clases de animación para el contenido principal */
 .animate-fade-in-up {
   animation: animate-fade-in-up 0.8s ease-out forwards;

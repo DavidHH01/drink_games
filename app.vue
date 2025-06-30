@@ -3,6 +3,7 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
+
 <script setup>
 useHead({
   script: [
@@ -12,5 +13,8 @@ useHead({
       crossorigin: "anonymous",
     },
   ],
+  meta: [
+    { name: 'google-site-verification', content: 'TU_CODIGO_DE_VERIFICACION_AQUI' }
+  ]
 });
 </script>

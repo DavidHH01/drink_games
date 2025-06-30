@@ -1,46 +1,73 @@
 <template>
   <div :class="headerClasses">
-    <!-- Icon and title section -->
-    <div class="flex items-center gap-3 min-w-0 flex-1">
-      <!-- Icon -->
-      <div
-        v-if="icon"
-        class="flex-shrink-0 w-10 h-10 rounded-lg text-gray-800 bg-current/10 flex items-center justify-center"
-      >
-        <MdiIcon :icon="icon" class="w-5 h-5" />
+    <!-- Background gradient -->
+    <div
+      v-if="gradientHeader"
+      class="absolute inset-0 bg-gradient-to-r from-accent/10 via-accent-2/5 to-accent/10 rounded-t-xl"
+    />
+    
+    <div class="relative z-10 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- Icon with enhanced styling -->
+        <div 
+          v-if="icon" 
+          class="relative flex items-center justify-center w-12 h-12 rounded-xl"
+          :class="iconContainerClass"
+        >
+          <!-- Icon glow effect -->
+          <div 
+            v-if="gradientHeader"
+            class="absolute inset-0 bg-gradient-to-br from-accent to-accent-2 rounded-xl blur opacity-30"
+          />
+          <div 
+            class="relative flex items-center justify-center w-full h-full rounded-xl border"
+            :class="iconBackgroundClass"
+          >
+            <MdiIcon :icon="icon" class="w-6 h-6 text-white drop-shadow-lg" />
+          </div>
+        </div>
+
+        <!-- Title and subtitle -->
+        <div class="flex-1">
+          <h3 
+            v-if="title" 
+            class="text-xl font-bold text-gray-900 mb-1"
+            :class="{ 'bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent': gradientHeader }"
+          >
+            {{ title }}
+          </h3>
+          <p 
+            v-if="subtitle" 
+            class="text-sm text-gray-600"
+            :class="{ 'text-accent/80': gradientHeader }"
+          >
+            {{ subtitle }}
+          </p>
+        </div>
+
+        <!-- Default slot for custom content -->
+        <slot />
       </div>
 
-      <!-- Title and subtitle -->
-      <div class="min-w-0 flex-1">
-        <h3
-          v-if="title || $slots.default"
-          class="text-xl font-semibold truncate text-gray-800"
+      <!-- Actions and close button -->
+      <div class="flex items-center gap-2">
+        <slot name="actions" />
+        
+        <button
+          v-if="closable"
+          @click="$emit('close')"
+          class="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 transition-all duration-200 hover:scale-105"
         >
-          <slot>{{ title }}</slot>
-        </h3>
-        <p
-          v-if="subtitle"
-          class="text-sm text-gray-600 mt-1 truncate"
-        >
-          {{ subtitle }}
-        </p>
+          <MdiIcon icon="mdiClose" class="w-4 h-4" />
+        </button>
       </div>
     </div>
 
-    <!-- Actions section -->
-    <div class="flex items-center gap-2 flex-shrink-0">
-      <!-- Custom actions -->
-      <slot name="actions" />
-
-      <!-- Close button -->
-      <button
-        v-if="closable"
-        @click="$emit('close')"
-        class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 text-gray-500 hover:text-gray-700 transition-colors duration-200"
-      >
-        <MdiIcon icon="mdiClose" class="w-4 h-4" />
-      </button>
-    </div>
+    <!-- Decorative line -->
+    <div 
+      v-if="gradientHeader"
+      class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
+    />
   </div>
 </template>
 
@@ -52,32 +79,37 @@ interface Props {
   subtitle?: string
   icon?: string
   closable?: boolean
-  class?: string
+  gradientHeader?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  closable: true
+  closable: true,
+  gradientHeader: false
 })
 
 defineEmits<{
   close: []
 }>()
 
-const headerClasses = computed(() => {
-  const classes = [
-    'flex',
-    'items-center',
-    'justify-between',
-    'p-6',
-    'border-b',
-    'border-gray-200',
-    'bg-white' // Asegurar fondo blanco
-  ]
-
-  if (props.class) {
-    classes.push(props.class)
+const headerClasses = computed(() => [
+  'relative px-6 py-4 border-b border-gray-200 rounded-t-xl',
+  {
+    'bg-white': !props.gradientHeader,
+    'bg-gradient-to-r from-gray-50 to-white': props.gradientHeader
   }
+])
 
-  return classes
+const iconContainerClass = computed(() => {
+  if (props.gradientHeader) {
+    return 'transform hover:scale-105 transition-transform duration-200'
+  }
+  return ''
+})
+
+const iconBackgroundClass = computed(() => {
+  if (props.gradientHeader) {
+    return 'bg-gradient-to-br from-accent to-accent-2 border-accent/30 shadow-lg'
+  }
+  return 'bg-gray-100 border-gray-200'
 })
 </script>
